@@ -1,0 +1,53 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="Fibeco.FirstTime"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Margin="-12,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" TextAlignment="Center" FontSize="42" HorizontalAlignment="Right" Width="480">
+            	<Run Text="Register Your "/>
+            	<Run Text="Info Here"/>
+            </TextBlock>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" Height="490" Margin="0,6,0,0" Grid.Row="1" VerticalAlignment="Top" Width="475">
+            <TextBlock TextWrapping="Wrap" Text="Username" Margin="15,0,0,0"/>
+            <TextBox x:Name="txtusername" Height="72" TextWrapping="Wrap" TabIndex="1" TabNavigation="Cycle"/>
+            <TextBlock TextWrapping="Wrap" Text="Password" Margin="15,0,0,0"/>
+            <PasswordBox x:Name="txtpassword" TabIndex="2" TabNavigation="Cycle"/>
+            <TextBlock TextWrapping="Wrap" Text="First Name" Margin="15,0,0,0"/>
+            <TextBox x:Name="txtfname" Height="72" TextWrapping="Wrap" TabIndex="3" TabNavigation="Cycle"/>
+            <TextBlock TextWrapping="Wrap" Text="Last Name" Margin="15,0,0,0"/>
+            <TextBox x:Name="txtlname" Height="72" TextWrapping="Wrap" TabIndex="4" TabNavigation="Cycle"/>
+            <TextBlock TextWrapping="Wrap" Text="Gender" Margin="15,0,0,0"/>
+        </StackPanel>
+        <StackPanel Margin="5,432,245,173" Grid.Row="1">
+            <RadioButton x:Name="rdmale" Content="Male" Margin="0,0,25,0" TabNavigation="Cycle" TabIndex="5" Checked="rdmale_Checked"/>
+        </StackPanel>
+        <StackPanel Margin="230,432,10,173" Grid.Row="1">
+            <RadioButton x:Name="rdfemale" Content="Female" Margin="0,0,25,0" TabNavigation="Cycle" TabIndex="6" Checked="rdfemale_Checked"/>
+        </StackPanel>
+        <Button x:Name="btnRegister" Content="Register" HorizontalAlignment="Left" Margin="0,501,-5,0" Grid.Row="1" VerticalAlignment="Top" Width="485" Height="87" TabIndex="7" TabNavigation="Cycle" Click="btnRegister_Click"/>
+        <Button x:Name="btnExit" Content="Exit" HorizontalAlignment="Left" Margin="0,587,0,0" Grid.Row="1" Width="175" TabIndex="7" TabNavigation="Cycle" Click="btnExit_Click"/>
+
+        <!--ContentPanel - place additional content here-->
+    </Grid>
+
+</phone:PhoneApplicationPage>

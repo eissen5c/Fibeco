@@ -1,0 +1,53 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="Fibeco.Home"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True" Background="#FF0017FF">
+    <Grid HorizontalAlignment="Left" Height="768" VerticalAlignment="Top" Width="480">
+        <Button Content="" HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="79" Margin="-5,-5,0,0" BorderBrush="{x:Null}" Click="Button_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/Resources/hamburger-6c8ab451fe032ebc79648c5a62456943604aea39b519b2bcd4dc117996305a8e.png"/>
+            </Button.Background>
+        </Button>
+        <StackPanel HorizontalAlignment="Left" Height="493" Margin="28,102,0,0" VerticalAlignment="Top" Width="154">
+            <TextBlock HorizontalAlignment="Left" Height="45" TextWrapping="Wrap" Text="Route" Width="146" TextAlignment="Right"/>
+            <TextBlock HorizontalAlignment="Left" Height="45" TextWrapping="Wrap" Text="Acct No" Width="146" TextAlignment="Right"/>
+            <TextBlock HorizontalAlignment="Left" Height="45" TextWrapping="Wrap" Text="Meter Serial" Width="146" TextAlignment="Right"/>
+            <TextBlock HorizontalAlignment="Left" Height="58" TextWrapping="Wrap" Width="146" TextAlignment="Right"/>
+            <TextBlock Height="45" TextWrapping="Wrap" Text="Acct Type" TextAlignment="Right" HorizontalAlignment="Left" Width="146"/>
+            <TextBlock HorizontalAlignment="Left" Height="45" TextWrapping="Wrap" Text="Name" Width="146" TextAlignment="Right"/>
+            <TextBlock HorizontalAlignment="Left" Height="45" TextWrapping="Wrap" Text="Address" Width="146" TextAlignment="Right"/>
+            <TextBlock HorizontalAlignment="Left" Height="45" TextWrapping="Wrap" Text="Present" Width="146" TextAlignment="Right" Visibility="Collapsed"/>
+            <TextBlock HorizontalAlignment="Left" Height="45" TextWrapping="Wrap" Text="Reading" Width="146" TextAlignment="Right"/>
+            <TextBlock HorizontalAlignment="Left" Height="45" TextWrapping="Wrap" Text="Demand" Width="146" TextAlignment="Right"/>
+        </StackPanel>
+        <TextBox x:Name="txtroute" TextWrapping="Wrap" FontSize="15" Margin="182,89,40,620" Height="59" VerticalAlignment="Center" Tap="select_route" IsReadOnly="True"/>
+        <TextBox x:Name="txtaccno" TextWrapping="Wrap" FontSize="15" Margin="182,135,40,574" TextChanged="TextBox_TextChanged"/>
+        <TextBox x:Name="txtacctype" TextWrapping="Wrap" FontSize="15" Margin="181,280,41,431" TextChanged="TextBox_TextChanged" IsReadOnly="True"/>
+        <TextBox x:Name="txtname" TextWrapping="Wrap" FontSize="15" Margin="181,322,41,387" IsReadOnly="True" TextChanged="TextBox_TextChanged_2"/>
+        <TextBox x:Name="txtaddress" TextWrapping="Wrap" FontSize="15" Margin="181,368,41,341" TextChanged="TextBox_TextChanged" IsReadOnly="True"/>
+        <TextBox x:Name="txtmeterserial" TextWrapping="Wrap" FontSize="15" Margin="182,178,40,533" TextChanged="searchbymeter"/>
+        <TextBox x:Name="txtpresent" TextWrapping="Wrap" FontSize="15" Margin="181,414,41,295" IsReadOnly="True" Visibility="Collapsed"/>
+        <TextBox x:Name="txtreading" TextWrapping="Wrap" FontSize="15" Margin="181,412,41,297" TextChanged="TextBox_TextChanged"/>
+        <TextBox x:Name="txtdemand" TextWrapping="Wrap" FontSize="15" Margin="181,459,41,252" TextChanged="TextBox_TextChanged"/>
+        <Button x:Name="btnProcesss" Content="Process" HorizontalAlignment="Left" Margin="109,515,0,0" VerticalAlignment="Top" Height="70" Width="155" Click="btnProcess"/>
+        <Button x:Name="btnCancel" Content="Back" HorizontalAlignment="Left" Margin="0,695,0,0" VerticalAlignment="Top" Height="70" Width="155" Click="Button_Click_1"/>
+        <Button x:Name="btnRePrintt" Content="Re-Print" HorizontalAlignment="Left" Margin="259,515,0,0" VerticalAlignment="Top" Height="70" Width="155" Click="btnRePrint" IsEnabled="False"/>
+        <Button x:Name="btnClear" Content="Clear" HorizontalAlignment="Left" Height="70" Margin="258,225,0,0" VerticalAlignment="Top" Width="157" FontSize="21" Click="Button_Click_2"/>
+        <Button x:Name="btnSearch" Content="Search" HorizontalAlignment="Left" Height="70" Margin="110,225,0,0" VerticalAlignment="Top" Width="155" FontSize="21" Click="btnSearch_Click"/>
+        <Button x:Name="btnNewBill" Content="New Session" HorizontalAlignment="Left" Margin="110,583,0,0" VerticalAlignment="Top" Width="305" Click="btnNewBill_Click" IsEnabled="False"/>
+        <Button Content="FTP TEST" HorizontalAlignment="Left" Margin="255,690,0,0" VerticalAlignment="Top" Height="78" Width="225" Click="Button_Click_3"/>
+    </Grid>
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+
+</phone:PhoneApplicationPage>

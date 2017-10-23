@@ -1,0 +1,43 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="Fibeco.UserProfile"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+    <Grid HorizontalAlignment="Left" Height="768" VerticalAlignment="Top" Width="480">
+        <Image x:Name="profilepicture" HorizontalAlignment="Left" Height="330" Margin="35,20,0,0" VerticalAlignment="Top" Width="410" Source="/Assets/ApplicationIcon.png" Stretch="Fill"/>
+        <Button Content="Upload" HorizontalAlignment="Left" Margin="20,358,0,0" VerticalAlignment="Top" Height="82" Width="440" Click="Button_Click_2" IsEnabled="False"/>
+        <StackPanel HorizontalAlignment="Left" Height="250" Margin="-14,458,0,0" VerticalAlignment="Top" Width="195">
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Name :" VerticalAlignment="Top" Height="65" Width="190" TextAlignment="Right" FontSize="25"/>
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="65" Width="190" TextAlignment="Right" FontSize="25">
+            	<Run Text="Address"/>
+            	<Run Text=" :"/>
+            </TextBlock>
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="65" Width="190" TextAlignment="Right" FontSize="25">
+            	<Run Text="Gender"/>
+            	<Run Text=" :"/>
+            </TextBlock>
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="50" Width="190" TextAlignment="Right" FontSize="25">
+            	<Run Text="Account Type"/>
+            	<Run Text=" :"/>
+            </TextBlock>
+        </StackPanel>
+        <TextBlock x:Name="lblname" HorizontalAlignment="Left" Height="50" Margin="181,460,0,0" TextWrapping="Wrap" Text="DATA HERE" VerticalAlignment="Top" Width="289" FontSize="25"/>
+        <TextBlock x:Name="lbladdress" HorizontalAlignment="Left" Height="50" Margin="181,525,0,0" TextWrapping="Wrap" Text="DATA HERE" VerticalAlignment="Top" Width="289" FontSize="25"/>
+        <TextBlock x:Name="lblgender" HorizontalAlignment="Left" Height="50" Margin="181,590,0,0" TextWrapping="Wrap" Text="DATA HERE" VerticalAlignment="Top" Width="289" FontSize="25"/>
+        <TextBlock x:Name="lblacctype" HorizontalAlignment="Left" Height="50" Margin="181,651,0,0" TextWrapping="Wrap" Text="DATA HERE" VerticalAlignment="Top" Width="289" FontSize="25"/>
+        <Button x:Name="btnCancel" Content="Back" HorizontalAlignment="Left" Margin="0,695,0,0" VerticalAlignment="Top" Height="70" Width="155" Click="Button_Click_1"/>
+        <Button x:Name="btnCancel_Copy" Content="Account Settings" HorizontalAlignment="Left" Margin="235,695,0,0" VerticalAlignment="Top" Height="70" Width="244" Click="Button_Click_1" IsEnabled="False"/>
+    </Grid>
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+
+</phone:PhoneApplicationPage>
